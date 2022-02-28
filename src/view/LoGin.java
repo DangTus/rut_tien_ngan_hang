@@ -114,13 +114,13 @@ public class LoGin extends javax.swing.JFrame {
             else if(cardService.loGinCard(userNameTF.getText(),String.valueOf(passTF.getPassword()))==2){
                  JOptionPane.showMessageDialog(this,"The Khoa","ERROR",JOptionPane.ERROR_MESSAGE);
             }else if(cardService.loGinCard(userNameTF.getText(),String.valueOf(passTF.getPassword()))==3){
-                //trang rut tien
-                System.out.println("dung");
+                new Menu(userNameTF.getText()).setVisible(true);
+                this.dispose();
             }
         } catch (SQLException ex) {
             Logger.getLogger(LoGin.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
        
     }//GEN-LAST:event_loginBTActionPerformed
 
