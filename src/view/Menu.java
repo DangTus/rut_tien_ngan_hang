@@ -57,7 +57,7 @@ public class Menu extends javax.swing.JFrame {
         cmndView = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         editPassBT = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        rutTienBT = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,7 +66,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel2.setText("Rut Tien");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jButton1.setText("Thoat");
+        jButton1.setText("THOÁT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -75,7 +75,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Ten :");
+        jLabel1.setText("TÊN :");
 
         nameView.setEditable(false);
         nameView.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
@@ -87,14 +87,14 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Password :");
+        jLabel3.setText("MẬT KHẨU :");
 
         passView.setEditable(false);
         passView.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("So Du :");
+        jLabel4.setText("SỐ DƯ :");
 
         moneyView.setEditable(false);
         moneyView.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
@@ -107,15 +107,20 @@ public class Menu extends javax.swing.JFrame {
         jLabel5.setText("CMND :");
 
         editPassBT.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        editPassBT.setText("Doi Mat Khau");
+        editPassBT.setText("ĐỔI MẬT KHẨU");
         editPassBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editPassBTActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jButton2.setText("Rut Tien");
+        rutTienBT.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        rutTienBT.setText("RÚT TIỀN");
+        rutTienBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rutTienBTActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(26, 26, 26)
                                 .addComponent(moneyView, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -152,7 +157,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(101, 101, 101)
                 .addComponent(editPassBT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(74, 74, 74)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(rutTienBT, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71))
         );
         layout.setVerticalGroup(
@@ -181,7 +186,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(cmndView, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rutTienBT, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editPassBT, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
         );
@@ -204,6 +209,12 @@ public class Menu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_editPassBTActionPerformed
 
+    private void rutTienBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rutTienBTActionPerformed
+        // TODO add your handling code here:
+        new RutTien(card.getUserName()).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_rutTienBTActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -213,7 +224,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField cmndView;
     private javax.swing.JButton editPassBT;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -222,5 +232,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField moneyView;
     private javax.swing.JTextField nameView;
     private javax.swing.JPasswordField passView;
+    private javax.swing.JButton rutTienBT;
     // End of variables declaration//GEN-END:variables
 }
